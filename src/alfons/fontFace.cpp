@@ -187,7 +187,7 @@ bool FontFace::load() {
         }
     }
 
-    LOGI("LOADED Font: %s size: %d", getFullName(), m_baseSize);
+    //LOGI("LOADED Font: %s size: %d", getFullName(), m_baseSize);
 
     m_loaded = true;
     return true;
