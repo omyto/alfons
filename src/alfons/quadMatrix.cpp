@@ -26,7 +26,7 @@ void QuadMatrix::load(const glm::mat4& matrix) {
 }
 
 void QuadMatrix::setIdentity() {
-    m = glm::mat4();
+    m = glm::mat4(1);
 }
 
 void QuadMatrix::push() {
@@ -41,7 +41,7 @@ void QuadMatrix::pop() {
 }
 
 void QuadMatrix::setTranslation(float x, float y, float z) {
-    m = glm::mat4();
+    m = glm::mat4(1);
     m[3][0] = x;
     m[3][1] = y;
     m[3][2] = z;
