@@ -92,6 +92,9 @@ public:
     float draw(const LineLayout& line, const LineSampler& path,
                float offsetX = 0, float offsetY = 0);
 
+    float drawWithMaxZigzag(float maxZigZag, const LineLayout& line, const LineSampler& path,
+      float offsetX = 0, float offsetY = 0);
+
     QuadMatrix& matrix() { return m_matrix; }
 
 protected:
