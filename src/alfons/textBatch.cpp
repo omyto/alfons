@@ -238,7 +238,6 @@ namespace alfons {
     glm::vec2 position;
     float angle;
     float lastAngle = 9999;
-    float t = false;
 
     for (auto& shape : DirectionalRange(_line.shapes(), reverse)) {
       //float half = 0.5f * line.advance(shape) * direction;
