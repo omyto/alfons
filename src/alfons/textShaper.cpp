@@ -226,8 +226,10 @@ void TextItemizer::itemizeDirection(TextLine& _line) {
         _line.directionItems.emplace_back(0, length, icuDirectionToHB(direction));
 
     } else {
-        auto count = ubidi_countRuns(bidi, &error);
-        _line.directionItems.reserve(count);
+        int32_t count = ubidi_countRuns(bidi, &error);
+        if (count > 0) {
+          _line.directionItems.reserve(count);
+        }
 
         for (int i = 0; i < count; ++i) {
             int32_t start, length;
